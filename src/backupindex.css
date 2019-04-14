@@ -1,0 +1,69 @@
+body{
+    background-image: "https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+img{
+    display: flex;
+    position: fixed;
+}
+.titleHeader{
+    display: flex;
+    justify-content: center;
+}
+.column{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.overallDisplay{
+    border: 1px solid black;
+    margin: 10px;
+    
+}
+.statDisplay{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    
+}
+
+.deletebutton{
+    font-weight: 900;
+    color: white;
+    margin: 5px;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    background-color: #c21807;
+}
+.editButton{
+    margin: 5px;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    background-color: #ff7417;
+}
+.fullInputs{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap
+
+}
+.statsInput{
+
+    margin: 5px;
+    height: 20px;
+    box-shadow: 5px 5px grey;
+}
+.submitNew{
+    height: 50px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: green;
+}
