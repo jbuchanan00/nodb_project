@@ -6,6 +6,7 @@ import StatsEditor from "./StatsEditor"
 
 
 
+
 export default class StatsView extends Component {
     constructor(props){
     super(props)
@@ -16,15 +17,15 @@ export default class StatsView extends Component {
 
 deleteStat = (e) => {
     let {id} = e.target
-    console.log(id, this.state.statistics)
+    
     let statistics = this.state.statistics
     let index = this.state.statistics.findIndex(stat => +stat.id === +id)
     this.state.statistics.splice(index, 1)
-    console.log(index)
-    console.log(this.state.statistics)
+    
 
     this.props.deleteStatLine(statistics, id)
 }
+
     
     render() {
         let {stat} = this.props
@@ -32,17 +33,33 @@ deleteStat = (e) => {
             <div className="column">
             <div className="overallDisplay">
             <div className="statDisplay">
-            {/* {console.log(this.state)} */}
-            <h1>{stat.id}</h1>
-            <p>Date: <br />{stat.date}</p>
-            <p>Points: {stat.points}</p>
-            <p>Assists: {stat.assists}</p>
-            <p>Rebounds: {stat.rebounds}</p>
-            <p>Blocks: {stat.blocks}</p>
-            <p>Steals: {stat.steals}</p>
+            <div className="displayStyle">
+                {/* <p>Date: </p> */}
+                <h2 className="date">{stat.date}</h2>
+            </div>
+            <div className="displayStyle">
+                <p>Points: </p>
+                <h2 className="stat">{stat.points}</h2>
+            </div>
+            <div className="displayStyle">
+                <p>Assists: </p>
+                <h2 className="stat">{stat.assists}</h2>
+            </div>
+            <div className="displayStyle">
+                <p>Rebounds: </p>
+                <h2 className="stat">{stat.rebounds}</h2>
+            </div>
+            <div className="displayStyle">
+                <p>Blocks: </p>
+                <h2 className="stat">{stat.blocks}</h2>
+            </div>
+            <div className="displayStyle">
+                <p>Steals: </p>
+                <h2 className="stat">{stat.steals}</h2>
+            </div>
             </div>
             <div className="buttons">
-            <StatsEditor statistics={this.state.statistics}/>
+            <StatsEditor statistics={this.state.statistics} updateStatLine={this.props.updateStatLine} id={stat.id}/>
             <button className="deletebutton" onClick={this.deleteStat} id={stat.id}>Delete</button>
             </div>
             </div>

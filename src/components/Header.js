@@ -7,7 +7,7 @@ return(
     <div className="header">
     
     <div className="titleHeader">
-    <h1 style={{fontStyle: "italic"}}>StatPADDER</h1>
+    <h1 style={{fontStyle: "italic", fontSize: "3em"}}>StatPADDER</h1>
     </div>
     </div>
     </div>

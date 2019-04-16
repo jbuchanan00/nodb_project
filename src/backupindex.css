@@ -1,6 +1,9 @@
 body{
-    background-image: "https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    background-color: aliceblue;
+    background-image: url("https://www.hornnam.com/wp-content/uploads/2018/07/woodPlank.jpg");
+    font-family: 'Shadows Into Light', cursive;
 }
+
 .header{
     display: flex;
     justify-content: center;
@@ -19,13 +22,17 @@ img{
 }
 .overallDisplay{
     border: 1px solid black;
+    border-radius: 20px;
     margin: 10px;
-    
+    background-image: url("https://www.651vinyl.com/images/D/basketball_500.jpg");
+    background-size: 500px;
+    background-position: center;
 }
 .statDisplay{
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
     
 
     
@@ -33,37 +40,117 @@ img{
 
 .deletebutton{
     font-weight: 900;
-    color: white;
+    font-size: 1em;
+    color: black;
     margin: 5px;
     height: 40px;
     width: 80px;
     border-radius: 20px;
-    background-color: #c21807;
+    background-image: url("https://www.chrisanne-clover.com/images/products/LUX.BOA_HOT.RED47670471677.jpg");
+
+}
+button{
+    border: 1px solid #000;
 }
 .editButton{
+    font-size: 1em;
     margin: 5px;
-    color: white;
+    color: black;
     font-weight: 900;
     height: 40px;
     width: 80px;
     border-radius: 20px;
-    background-color: #ff7417;
+    background-image: url("https://tave.com/wp-content/uploads/2016/06/786760149819-blue-cool-backgrounds-patterns-wallpapers-pattern.jpg");
+    background-size: cover;
 }
 .fullInputs{
     display: flex;
+    padding: 20px;
     align-items: center;
-    flex-wrap: wrap
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .statsInput{
 
     margin: 5px;
     height: 20px;
     box-shadow: 5px 5px grey;
+    border-radius: 10px;
+    
 }
 .submitNew{
     height: 50px;
     width: 55px;
     border-radius: 50%;
-    background-color: green;
+    background-image: url("https://img.freepik.com/free-vector/elegant-green-geometric-polygon-background_1035-13146.jpg?size=338&ext=jpg");
+    background-size: cover;
+}
+p{
+    font-weight: 900;
+}
+.saveButton{
+    background-image: url("https://img.freepik.com/free-psd/abstract-background-design_1297-84.jpg?size=626&ext=jpg");
+    background-size: cover;
+    
+}
+.saveOrCancelButtons{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.editingButtons{
+    
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+.cancelButton{
+    background-image: url("https://img.freepik.com/free-vector/yellow-comic-zoom-lines-background_1017-15136.jpg?size=338&ext=jpg");
+}
+.date{
+    display: flex;
+    font-size: 3em;
+    font-weight: 900;
+    width: 15vw;
+}
+.stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #000;
+    height: 50px;
+    width: 50px;
+    border-radius: 40%
+}
+.averagesContainer{
+    border: 1px solid #000;
+    height: 90px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    position: fixed;
+    border-radius: 20px;
+    margin: 10px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+}
+.averages{
+    font-size: 2em;
+    /* display: flex; */
+    
+}
+.averagesContainersContainer{
+    display: flex;
+    align-items: flex-start;
+}
+.averageLabel{
+    text-decoration: underline;
 }

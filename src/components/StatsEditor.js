@@ -19,32 +19,51 @@ export default class StatsEditor extends Component{
         })
     }
     handleChange = (e) => {
-        let {name, value} = e.target
+        let {value, name} = e.target
         this.setState({
             [name]: value
         })
     }
-    saveEdit = () => {
+    saveEdit = (e) => {
+        
+        let {id} = e.target
+
         this.setState({
             canEdit: !this.state.canEdit
         })
         let updatedStats = this.state
-        console.log(updatedStats)
+        
+        this.props.updateStatLine(updatedStats, id)
+    }
+    cancelButton = (e) => {
+        this.setState({
+            canEdit: !this.state.canEdit
+        })
+
     }
 
     
     render(){
-        console.log(this.state)
-            let viewing = !this.state.canEdit ? <button className="editButton" onClick={this.toggleEdit}>Edit</button> :
+    
+            let viewing = !this.state.canEdit ? <button className="editButton" onClick={this.toggleEdit}><span>Edit</span></button> :
             
             <div>
-                <input className="editor" name="date" value={this.state.date}></input>
-                <input className="editor" name="points" value={this.state.points}></input>
-                <input className="editor" name="assists" value={this.state.assists}></input>
-                <input className="editor" name="rebound" value={this.state.rebounds}></input>
-                <input className="editor" name="blocks" value={this.state.blocks}></input>
-                <input className="editor" name="steals" value={this.state.steals}></input>
-                <button onClick={this.saveEdit}>Save</button>
+                <input className="statsInput" name="date" onChange={this.handleChange} placeholder="date MM/DD/YY"></input>
+
+                <input className="statsInput" name="points" onChange={this.handleChange} placeholder="Points"></input>
+
+                <input className="statsInput" name="assists" onChange={this.handleChange} placeholder="Assists"></input>
+
+                <input className="statsInput" name="rebound" onChange={this.handleChange} placeholder="Rebounds"></input>
+
+                <input className="statsInput" name="blocks" onChange={this.handleChange} placeholder="Blocks"></input>
+
+                <input className="statsInput" name="steals" onChange={this.handleChange} placeholder="Steals"></input>
+            <div className="saveOrCancelButtons">
+                <button className="editingButtons saveButton" onClick={this.saveEdit} id={this.props.id}>Save</button>
+
+                <button className="editingButtons cancelButton" onClick={this.cancelButton}>Cancel</button>
+            </div>
             </div>
             return(viewing)
         
